@@ -1,119 +1,54 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #f1f9fc;
-  color: #3a3a3a;
-  line-height: 1.6;
+  background-color: #f4f8fb;
+  margin: 0;
   padding: 0;
+  color: #333;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2, h3 {
-  font-weight: bold;
-}
-
-/* Header */
 header {
-  background: linear-gradient(135deg, #82c7d5, #4c8a97);
+  background-color: #4c8a97;
   color: white;
-  padding: 60px 20px;
   text-align: center;
-  border-bottom: 5px solid #4c8a97;
+  padding: 30px;
 }
 
-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-header p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #f9f9f9;
+p {
+  margin: 0;
+  font-size: 1.2rem;
 }
 
-/* Main Section */
 main {
-  max-width: 1200px;
-  margin: 50px auto;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
 }
 
 section {
-  padding: 25px;
-  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+#about, #skills, #projects, #contact {
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-section h2 {
-  color: #4c8a97;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
-
-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666;
-}
-
-section a {
-  display: inline-block;
-  margin-top: 20px;
-  background-color: #4c8a97;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-section a:hover {
-  background-color: #82c7d5;
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background-color: #4c8a97;
-  color: white;
+  border-radius: 8px;
   padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 5px solid #82c7d5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer a {
-  color: #f1f9fc;
-  font-weight: 600;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-footer a:hover {
-  color: #ffb800;
+ul li {
+  margin: 10px 0;
 }
 
 .music-panel {
-  background-color: #f1f9fc;
+  background-color: #ffffff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -121,7 +56,7 @@ footer a:hover {
   text-align: center;
 }
 
-.music-panel input {
+input {
   padding: 10px;
   width: 80%;
   max-width: 400px;
@@ -129,61 +64,32 @@ footer a:hover {
   border: 2px solid #4c8a97;
   border-radius: 5px;
   font-size: 1rem;
-  color: #333;
 }
 
-.music-panel button {
+button {
   background-color: #4c8a97;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
-.music-panel button:hover {
-  background-color: #82c7d5;
+button:hover {
+  background-color: #3b7079;
 }
 
-#song-results {
+#spotify-player {
   margin-top: 20px;
 }
 
-.song-item {
-  margin: 10px 0;
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4c8a97;
+  color: white;
 }
 
-.song-item a {
-  color: #4c8a97;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-
-  header h1 {
-    font-size: 2.8rem;
-  }
-
-  header p {
-    font-size: 1.2rem;
-  }
-
-  section {
-    margin-bottom: 30px;
-  }
-
-  section a {
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-  }
-}
 

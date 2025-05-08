@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lisette Mainhard - QA Analyst</title>
-  <link rel="stylesheet" href="https://lisettelilen.github.io/Mi-portfolio--QA/style.css">
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -51,31 +51,30 @@
 
     <section id="contact">
       <h2>Contacto</h2>
-      <p>Email: <a href="lisettemainhard@gmail.com">lisettemainhard@gmail.com</a></p>
+      <p>Email: <a href="mailto:lisettemainhard@gmail.com">lisettemainhard@gmail.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/lisette-mainhard-353a281b4/" target="_blank">Mi perfil</a></p>
       <p>GitHub: <a href="https://github.com/lisettelilen" target="_blank">Mis proyectos</a></p>
     </section>
   </main>
 
-    <section class="music-panel">
-      <h3>Selecciona una Canción de Spotify</h3>
-      <p>Busca y selecciona una canción de Spotify directamente desde este panel:</p>
+  <section class="music-panel">
+    <h3>Selecciona una Canción de Spotify</h3>
+    <p>Busca y selecciona una canción de Spotify directamente desde este panel:</p>
     
-    <!-- Input para buscar canciones -->
-    <input type="text" id="search-input" placeholder="Buscar canción" oninput="searchSpotifySongs()" />
-    
-    <!-- Resultados de búsqueda -->
+    <input type="text" id="search-input" placeholder="Buscar canción..." oninput="searchSpotifySongs()" />
     <div id="song-results"></div>
-    </section>
-    <section class="music-panel">
-      <h3>Escucha mi Playlist</h3>
-      <iframe src="https://open.spotify.com/embed/playlist/5b5PZay0cJdpj7AskmHkfw" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
-      <button onclick="window.open('https://open.spotify.com/playlist/5b5PZay0cJdpj7AskmHkfw', '_blank')">Ver Playlist en Spotify</button>
-    </section>
-  
+
+    <div id="spotify-player">
+      <h4>Reproductor de Canción Seleccionada:</h4>
+      <iframe id="spotify-iframe" src="" width="300" height="380" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Lisette Mainhard</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
