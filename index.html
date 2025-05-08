@@ -57,6 +57,23 @@
     </section>
   </main>
 
+    <section class="music-panel">
+      <h3>Selecciona una Canción de Spotify</h3>
+      <p>Busca y selecciona una canción de Spotify directamente desde este panel:</p>
+    
+    <!-- Input para buscar canciones -->
+    <input type="text" id="search-input" placeholder="Buscar canción" oninput="searchSpotifySongs()" />
+    
+    <!-- Resultados de búsqueda -->
+    <div id="song-results"></div>
+    </section>
+    <section class="music-panel">
+      <h3>Escucha mi Playlist</h3>
+      <iframe src="https://open.spotify.com/embed/playlist/5b5PZay0cJdpj7AskmHkfw" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <button onclick="window.open('https://open.spotify.com/playlist/5b5PZay0cJdpj7AskmHkfw', '_blank')">Ver Playlist en Spotify</button>
+    </section>
+  
+
   <footer>
     <p>© 2025 Lisette Mainhard</p>
   </footer>
