@@ -1,5 +1,5 @@
-
-{
+/* Estilo Global */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,42 +21,52 @@ h1, h2, h3 {
   font-weight: bold;
 }
 
+/* Header */
 header {
   background: linear-gradient(135deg, #6e7dff, #3f54ff);
   color: white;
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
   border-bottom: 5px solid #3f54ff;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  margin-bottom: 15px;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
+/* Main Section */
 main {
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 50px auto;
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
 section {
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 section h2 {
   color: #3f54ff;
   margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
 section p {
@@ -73,36 +83,56 @@ section a {
   padding: 12px 24px;
   border-radius: 5px;
   text-align: center;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 section a:hover {
   background-color: #6e7dff;
+  transform: scale(1.05);
 }
 
+/* Footer */
 footer {
   background-color: #3f54ff;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
+  border-top: 5px solid #6e7dff;
 }
 
 footer a {
   color: #f4f7fc;
+  font-weight: 600;
 }
 
 footer a:hover {
   color: #ffb800;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
   }
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  header p {
+    font-size: 1.2rem;
+  }
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  section a {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
   }
 }
 
