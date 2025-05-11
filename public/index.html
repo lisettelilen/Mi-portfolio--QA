@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lisette Mainhard - QA Analyst</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Lisette Mainhard</h1>
+    <p>QA Analyst | Test Automation | Liderazgo técnico</p>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy QA con experiencia en testing manual y automatizado. Trabajo con metodologías ágiles, me apasiona la mejora continua, la calidad en los procesos y el trabajo en equipo.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades Técnicas</h2>
+      <ul>
+        <li>Cypress, Selenium, Postman, JMeter</li>
+        <li>Git, GitHub, GitLab CI/CD</li>
+        <li>Jira, TestRail, Zephyr</li>
+        <li>SQL, JSON, API REST</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <div class="project">
+        <h3>E2E testing con Cypress</h3>
+        <p>Automatización de flujo de compra en una tienda online. Uso de fixtures, page objects y reportes.</p>
+      </div>
+      <div class="project">
+        <h3>Stress test de API con JMeter</h3>
+        <p>Simulación de múltiples usuarios sobre una API REST. Análisis de resultados de carga y rendimiento.</p>
+      </div>
+      <div class="project">
+        <h3>Automatización con Selenium</h3>
+        <p>Pruebas funcionales automatizadas con Selenium y Python. Validación de flujos críticos.</p>
+      </div>
+      <div class="project">
+        <h3>Estrategia de Testing QA (Agile)</h3>
+        <p>Diseño de guía QA para equipo Scrum. Criterios de calidad, métricas y procesos definidos.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:lisettemainhard@gmail.com">lisettemainhard@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/lisette-mainhard-353a281b4/" target="_blank">Mi perfil</a></p>
+      <p>GitHub: <a href="https://github.com/lisettelilen" target="_blank">Mis proyectos</a></p>
+    </section>
+  </main>
+
+  <section class="music-panel">
+    <h3>Selecciona una Canción de Spotify</h3>
+    <p>Busca y selecciona una canción de Spotify directamente desde este panel:</p>
+    
+    <input type="text" id="search-input" placeholder="Buscar canción..." oninput="searchSpotifySongs()" />
+    <div id="song-results"></div>
+
+    <div id="spotify-player">
+      <h4>Reproductor de Canción Seleccionada:</h4>
+      <iframe id="spotify-iframe" src="" width="300" height="380" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <button onclick="loginWithSpotify()">Iniciar sesión con Spotify</button>
+
+<script>
+  function loginWithSpotify() {
+    window.location.href = 'http://localhost:3000/login';
+  }
+
+  // Cuando volvés con el token:
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('access_token');
+  if (token) {
+    console.log('Token recibido:', token);
+    // Guardalo en localStorage y usalo para llamadas a la API
+  }
+</script>
+
+
+  <footer>
+    <p>© 2025 Lisette Mainhard</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
