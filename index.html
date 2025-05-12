@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
 </head>
+
 <body>
 
     <header>
@@ -64,19 +66,12 @@
             <h2>¿Querés recomendarme una canción?</h2>
             <p>Copiá el link de YouTube o Spotify y completá el formulario.</p>
 
-        <form action="https://formspree.io/f/xblozkyp" method="POST">
-          <label for="nombre">Tu nombre:</label>
-          <input type="text" name="nombre" required placeholder="Ej: Sofi">
-
-          <label for="cancion">Link de la canción:</label>
-          <input type="url" name="cancion" required placeholder="https://formspree.io/f/xblozkyp">
-
-          <label for="mensaje">Mensaje (opcional):</label>
-          <textarea name="mensaje" placeholder="¿Por qué me la recomendás?"></textarea>
-
-        <button type="submit">Enviar recomendación</button>
-    </form>
-</section>
+            <form action="https://formspree.io/f/xblozkyp" method="POST">
+                <label for="cancion">Link de la canción:</label>
+                <input type="url" name="cancion" required placeholder="https://formspree.io/f/xblozkyp">
+                <button type="submit">Enviar recomendación</button>
+            </form>
+        </section>
 
     </main>
 
@@ -85,6 +80,7 @@
     </footer>
 
 </body>
+
 </html>
 
 
