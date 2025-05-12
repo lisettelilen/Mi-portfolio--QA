@@ -1,83 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lisette Mainhard - QA Analyst</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="scripts.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio - QA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Lisette Mainhard</h1>
-    <p>QA Analyst | Test Automation | Liderazgo técnico</p>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2>Sobre mí</h2>
-      <p>Soy QA con experiencia en testing manual y automatizado. Trabajo con metodologías ágiles, me apasiona la mejora continua, la calidad en los procesos y el trabajo en equipo.</p>
-    </section>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Sobre mí</a>
+        <a href="#">Proyectos</a>
+        <a href="#">Contacto</a>
+    </div>
 
-    <section id="skills">
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>Cypress, Selenium, Postman, JMeter</li>
-        <li>Git, GitHub, GitLab CI/CD</li>
-        <li>Jira, TestRail, Zephyr</li>
-        <li>SQL, JSON, API REST</li>
-      </ul>
-    </section>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Bienvenido a Mi Portfolio</h1>
+        <h2>Explora mis proyectos y descubre nuevas canciones</h2>
 
-    <section id="projects">
-      <h2>Proyectos</h2>
-      <div class="project">
-        <h3>E2E testing con Cypress</h3>
-        <p>Automatización de flujo de compra en una tienda online. Uso de fixtures, page objects y reportes.</p>
-      </div>
-      <div class="project">
-        <h3>Stress test de API con JMeter</h3>
-        <p>Simulación de múltiples usuarios sobre una API REST. Análisis de resultados de carga y rendimiento.</p>
-      </div>
-      <div class="project">
-        <h3>Automatización con Selenium</h3>
-        <p>Pruebas funcionales automatizadas con Selenium y Python. Validación de flujos críticos.</p>
-      </div>
-      <div class="project">
-        <h3>Estrategia de Testing QA (Agile)</h3>
-        <p>Diseño de guía QA para equipo Scrum. Criterios de calidad, métricas y procesos definidos.</p>
-      </div>
-    </section>
+        <!-- Buscador de canciones -->
+        <div class="search-container">
+            <input type="text" id="songSearch" placeholder="Busca una canción...">
+            <button id="searchButton">Buscar</button>
+        </div>
 
-    <section id="contact">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:lisettemainhard@gmail.com">lisettemainhard@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/lisette-mainhard-353a281b4/" target="_blank">Mi perfil</a></p>
-      <p>GitHub: <a href="https://github.com/lisettelilen" target="_blank">Mis proyectos</a></p>
-    </section>
-  </main>
+        <!-- Resultados de la búsqueda -->
+        <div class="results-container" id="resultsContainer">
+            <!-- Los resultados se mostrarán aquí -->
+        </div>
+    </div>
 
-     </section>
+    <!-- Pie de página -->
+    <footer>
+        <p>Creado por <a href="#">Tu Nombre</a> - 2025</p>
+    </footer>
 
-
-    <section id="music">
-      <div class="container">
-        <h2>🎵 Buscador de Canciones</h2>
-        <form id="search-form">
-          <input type="text" id="search-input" placeholder="Ingresa el nombre de la canción o artista" required />
-          <button type="submit">Buscar</button>
-        </form>
-        <div id="results"></div>
-      </div>
-    </section>
-
-  </main>
-  <footer>
-    <p>© 2025 Lisette Mainhard</p>
-  </footer>
-
-
+    <script src="script.js"></script>
 
 </body>
 </html>
