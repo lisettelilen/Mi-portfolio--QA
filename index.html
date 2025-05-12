@@ -58,43 +58,27 @@
     </section>
   </main>
 
-  <section class="music-panel">
-    <h3>Selecciona una Canción de Spotify</h3>
-    <p>Busca y selecciona una canción de Spotify directamente desde este panel:</p>
-    
-    <input type="text" id="search-input" placeholder="Buscar canción..." oninput="searchSpotifySongs()" />
-    <div id="song-results"></div>
-
-    <div id="spotify-player">
-      <h4>Reproductor de Canción Seleccionada:</h4>
-      <iframe id="spotify-iframe" src="" width="300" height="380" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </section>
-
-    <div id="status"></div>
-
-  <button onclick="loginWithSpotify()">Iniciar sesión con Spotify</button>
-
-<script>
-  function loginWithSpotify() {
-    window.location.href = 'http://localhost:3000/login';
-  }
-
-  // Cuando volvés con el token:
-  const urlParams = new URLSearchParams(window.location.search);
-  const token = urlParams.get('access_token');
-  if (token) {
-    console.log('Token recibido:', token);
-    // Guardalo en localStorage y usalo para llamadas a la API
-  }
-</script>
+     </section>
 
 
+    <section id="music">
+      <div class="container">
+        <h2>🎵 Buscador de Canciones</h2>
+        <form id="search-form">
+          <input type="text" id="search-input" placeholder="Ingresa el nombre de la canción o artista" required />
+          <button type="submit">Buscar</button>
+        </form>
+        <div id="results"></div>
+      </div>
+    </section>
+
+  </main>
   <footer>
     <p>© 2025 Lisette Mainhard</p>
   </footer>
 
-  <script src="script.js"></script>
+
+
 </body>
 </html>
 
