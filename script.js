@@ -1,54 +1,42 @@
-// server.js
-const express = require('express');
-const request = require('request');
-const cors = require('cors');
-const querystring = require('querystring');
-require('dotenv').config();
-
-const app = express();
-app.use(cors());
-
-const client_id = process.env.SPOTIFY_CLIENT_ID;
-const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
-const redirect_uri = process.env.REDIRECT_URI || 'https://localhost:3000/callback';
-
-app.get('/login', (req, res) => {
-  const scope = 'user-read-private user-read-email';
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id,
-      scope,
-      redirect_uri
-    }));
-});
-
-app.get('/callback', (req, res) => {
-  const code = req.query.code || null;
-  const authOptions = {
-    url: 'https://accounts.spotify.com/api/token',
-    form: {
-      code,
-      redirect_uri,
-      grant_type: 'authorization_code'
-    },
-    headers: {
-      'Authorization': 'Basic ' + Buffer.from(client_id + ':' + client_secret).toString('base64')
-    },
-    json: true
-  };
-
-  request.post(authOptions, (error, response, body) => {
-    const access_token = body.access_token;
-    if (access_token) {
-      res.redirect(`https://lisettelilen.github.io/Mi-portfolio--QA/?access_token=${access_token}`);
-    } else {
-      res.send('Error al iniciar sesión con Spotify');
+document.getElementById('searchButton').addEventListener('click', function() {
+    const query = document.getElementById('songSearch').value.trim();
+    if (query) {
+        searchSong(query);
     }
-  });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en puerto ${PORT}`);
-});
+function searchSong(query) {
+    const apiKey = 'TU_CLAVE_DE_API_DE_YOUTUBE'; // Reemplaza con tu clave
+    const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&maxResults=5&key=${apiKey}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => displayResults(data.items))
+        .catch(error => console.error('Error al buscar:', error));
+}
+
+function displayResults(results) {
+    const container = document.getElementById('resultsContainer');
+    container.innerHTML = ''; // Limpiar resultados anteriores
+
+    results.forEach(result => {
+        const card = document.createElement('div');
+        card.classList.add('result-card');
+
+        const image = document.createElement('img');
+        image.src = result.snippet.thumbnails.high.url;
+        card.appendChild(image);
+
+        const title = document.createElement('h3');
+        title.textContent = result.snippet.title;
+        card.appendChild(title);
+
+        const link = document.createElement('a');
+        link.href = `https://www.youtube.com/watch?v=${result.id.videoId}`;
+        link.target = '_blank';
+        link.textContent = 'Ver en YouTube';
+        card.appendChild(link);
+
+        container.appendChild(card);
+    });
+}
