@@ -6,7 +6,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
 });
 
 function searchSong(query) {
-    const apiKey = 'TU_CLAVE_DE_API_DE_YOUTUBE'; // Reemplaza con tu clave
+    const apiKey = 'AIzaSyCogHLrOkv5j1qIjAANBbTqETyqj7iMKc8'; 
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&type=video&maxResults=5&key=${apiKey}`;
 
     fetch(url)
